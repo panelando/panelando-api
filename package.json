@@ -4,7 +4,7 @@
   "description": "Panelando web api",
   "main": "index.js",
   "scripts": {
-    "test": "test",
+    "test": "echo \"No tests found\"",
     "eslint": "eslint app/**/*.js"
   },
   "repository": {
