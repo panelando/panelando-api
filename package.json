@@ -1,0 +1,25 @@
+{
+  "name": "panelando-api",
+  "version": "0.0.1",
+  "description": "Panelando web api",
+  "main": "index.js",
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/panelando/panelando-api.git"
+  },
+  "keywords": [
+    "panelando",
+    "cooking",
+    "web",
+    "api"
+  ],
+  "author": "Guilherme Rv Coelho <@grvcoelho>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/panelando/panelando-api/issues"
+  },
+  "homepage": "https://github.com/panelando/panelando-api#readme"
+}
