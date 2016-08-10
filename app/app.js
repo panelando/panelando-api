@@ -2,9 +2,7 @@ import express from 'express'
 import bodyParser from 'body-parser'
 import morgan from 'morgan'
 import cors from 'cors'
-import { getLogger } from 'log4js'
-
-const logger = getLogger()
+import logger from './lib/logger'
 
 class App {
   constructor(app) {
