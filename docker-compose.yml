@@ -1,0 +1,16 @@
+version: '2'
+
+services:
+  web:
+    build: .
+    command: npm start
+    links:
+      - "db:db"
+    volumes:
+      - .:/app
+    ports:
+      - 3000:3000
+
+  db:
+    image: postgres:9.6
+
