@@ -9,13 +9,13 @@ You need [docker](https://docs.docker.com/engine/installation/) installed for th
 1. Build the application
 
 ```sh
-$ `docker-compose build
+$ docker-compose build
 ```
 
 2. Run the application
 
 ```sh
-$ `docker-compose up
+$ docker-compose up
 ```
 
 ## License
