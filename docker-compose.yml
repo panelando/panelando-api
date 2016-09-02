@@ -6,10 +6,11 @@ services:
     command: npm start
     links:
       - "db:db"
-    volumes:
-      - .:/app
     ports:
       - 3000:3000
+    volumes:
+      - .:/app
+      - /app/node_modules
 
   db:
     image: postgres:9.6
