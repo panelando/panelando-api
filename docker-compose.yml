@@ -4,8 +4,10 @@ services:
   web:
     build: .
     command: npm start
+    depends_on:
+      - db
     links:
-      - "db:db"
+      - db:db
     ports:
       - 3000:3000
     volumes:
