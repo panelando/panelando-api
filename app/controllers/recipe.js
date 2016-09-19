@@ -1,4 +1,4 @@
-import recipe from './model'
+import recipe from 'models/recipe'
 
 export function index (req, res) {
   recipe.findAll()

@@ -2,9 +2,9 @@ import express from 'express'
 import bodyParser from 'body-parser'
 import morgan from 'morgan'
 import cors from 'cors'
-import menus from './modules/menus/routes'
-import tags from './modules/tags/routes'
-import recipes from './modules/recipes/routes'
+import menus from './routes/menu'
+import tags from './routes/tag'
+import recipes from './routes/recipe'
 
 let app = express()
 
