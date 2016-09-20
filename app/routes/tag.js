@@ -1,5 +1,5 @@
 import { Router } from 'express'
-import { index, show, create, update, remove } from './controller'
+import { index, show, create, update, remove } from 'controllers/tag'
 
 const router = new Router()
 
