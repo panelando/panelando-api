@@ -1,5 +1,5 @@
 import { Router } from 'express'
-import model from 'models/menu'
+import model from 'models/user'
 import resftul from 'controllers/restful'
 
 const { index, show, create, update, remove } = restful(model)
@@ -12,4 +12,3 @@ router.put('/:id', update)
 router.delete('/:id', remove)
 
 export default router
-
