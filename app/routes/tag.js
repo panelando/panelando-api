@@ -1,6 +1,8 @@
 import { Router } from 'express'
-import { index, show, create, update, remove } from 'controllers/tag'
+import model from 'models/tag'
+import resftul from 'controllers/restful'
 
+const { index, show, create, update, remove } = restful(model)
 const router = new Router()
 
 router.get('/', index)
