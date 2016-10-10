@@ -1,6 +1,6 @@
 import { Router } from 'express'
 import model from 'models/category'
-import resftul from 'controllers/restful'
+import restful from 'controllers/restful'
 
 const { index, show, create, update, remove } = restful(model)
 const router = new Router()
