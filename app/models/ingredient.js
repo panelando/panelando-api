@@ -1,17 +1,18 @@
 import { STRING } from 'sequelize'
-import database from 'lib/database'
 
-const model = database.define('ingredient', {
-  name: {
-    type: STRING,
-    allowNull: false
-  },
+function create (database) {
+  return database.define('ingredient', {
+    name: {
+      type: STRING,
+      allowNull: false
+    },
 
-  amount: {
-    type: STRING,
-    allowNull: false
-  }
-})
+    amount: {
+      type: STRING,
+      allowNull: false
+    }
+  })
+}
 
-export default model
+export default { create }
 
