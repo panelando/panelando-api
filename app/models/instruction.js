@@ -1,11 +1,13 @@
 import { TEXT } from 'sequelize'
-import database from 'lib/database'
 
-const model = database.define('instruction', {
-  description: {
-    type: TEXT,
-    allowNull: false
-  }
-})
+function create (database) {
+  return database.define('instruction', {
+    description: {
+      type: TEXT,
+      allowNull: false
+    }
+  })
+}
 
-export default model
+export default { create }
+
