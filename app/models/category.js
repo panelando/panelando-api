@@ -14,5 +14,9 @@ function create (database) {
   })
 }
 
-export default { create }
+function associate (category, { recipe }) {
+  category.hasMany(recipe)
+}
+
+export default { create, associate }
 
