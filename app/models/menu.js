@@ -14,5 +14,7 @@ function create (database) {
   })
 }
 
-export default { create }
+function associate (database) {}
+
+export default { create, associate }
 

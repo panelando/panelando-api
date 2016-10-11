@@ -1,7 +1,7 @@
 import Sequelize from 'sequelize'
-import { mapObjIndexed, merge } from 'ramda'
+import R, { mapObjIndexed, merge } from 'ramda'
 import config from '../config/database'
-import models from '../models'
+import rawModels from '../models'
 
 const database = new Sequelize(config)
 
@@ -17,8 +17,11 @@ const associateModels = ({ model, instance }) => {
   }
 }
 
-export const initializeModels = () =>
-  models.map(createInstances).map(associateModels)
+const initializeModels = () =>
+  rawModels.map(createInstances).map(associateModels)
 
+initializeModels()
+
+export const models = database.models
 export default database
 
