@@ -1,8 +1,8 @@
 import { Router } from 'express'
-import model from 'models/user'
-import resftul from 'controllers/restful'
+import { models } from 'lib/database'
+import restful from 'controllers/restful'
 
-const { index, show, create, update, remove } = restful(model)
+const { index, show, create, update, remove } = restful(models.user)
 const router = new Router()
 
 router.get('/', index)
@@ -12,3 +12,4 @@ router.put('/:id', update)
 router.delete('/:id', remove)
 
 export default router
+
