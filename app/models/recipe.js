@@ -32,4 +32,13 @@ function create (database) {
   })
 }
 
-export default { create }
+function associate (recipe, { ingredient, instruction, tag, menu, user }) {
+  recipe.hasMany(ingredient)
+  recipe.hasMany(instruction)
+  recipe.belongsToMany(menu, { through: 'recipes_menus' })
+  recipe.belongsToMany(tag, { through: 'recipes_tags' })
+  recipe.belongsToMany(user, { through: 'recommendations' })
+}
+
+export default { create, associate }
+

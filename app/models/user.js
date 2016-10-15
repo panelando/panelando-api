@@ -9,5 +9,11 @@ function create (database) {
   })
 }
 
-export default { create }
+function associate (user, { comment, recipe }) {
+  user.hasMany(comment)
+  user.hasMany(recipe)
+  user.belongsToMany(recipe, { through: 'recommendations' })
+}
+
+export default { create, associate }
 

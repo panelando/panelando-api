@@ -9,5 +9,9 @@ function create (database) {
   })
 }
 
-export default { create }
+function associate (tag, { recipe }) {
+  tag.belongsToMany(recipe, { through: 'recipes_tags' })
+}
+
+export default { create, associate }
 

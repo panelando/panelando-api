@@ -14,7 +14,9 @@ function create (database) {
   })
 }
 
-function associate (database) {}
+function associate (menu, { recipe }) {
+  menu.belongsToMany(recipe, { through: 'recipes_menus' })
+}
 
 export default { create, associate }
 
